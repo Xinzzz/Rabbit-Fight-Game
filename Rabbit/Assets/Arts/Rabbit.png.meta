@@ -13,6 +13,14 @@ TextureImporter:
     21300016: Rabbit_8
     21300018: Rabbit_9
     21300020: Rabbit_10
+    21300022: Rabbit_11
+    21300024: Rabbit_12
+    21300026: Rabbit_13
+    21300028: Rabbit_14
+    21300030: Rabbit_15
+    21300032: Rabbit_16
+    21300034: Rabbit_17
+    21300036: Rabbit_18
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -56,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +79,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -82,7 +90,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -93,7 +101,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +112,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: WebGL
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -122,7 +130,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b0cacabe1c992943b45a7fbe909abb2
+      spriteID: d7d303f622625b44e8d821b9977d070e
       vertices: []
       indices: 
       edges: []
@@ -140,9 +148,9 @@ TextureImporter:
       name: Rabbit_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 80
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -151,7 +159,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a16cdeb2ffc450449d3334daa7b902f
+      spriteID: dc9e3fc88a0e9fa49a1a223ecc480717
       vertices: []
       indices: 
       edges: []
@@ -160,9 +168,9 @@ TextureImporter:
       name: Rabbit_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 160
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5c5f3145d7ca4f47812dc6bace886e5
+      spriteID: 96372cc831b985d4fae728420680eea4
       vertices: []
       indices: 
       edges: []
@@ -180,9 +188,9 @@ TextureImporter:
       name: Rabbit_3
       rect:
         serializedVersion: 2
-        x: 210
+        x: 240
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -191,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4f4937ede5803c42b867d0d5586feae
+      spriteID: aa75db12b5bbe004d89847cd2f758441
       vertices: []
       indices: 
       edges: []
@@ -200,9 +208,9 @@ TextureImporter:
       name: Rabbit_4
       rect:
         serializedVersion: 2
-        x: 280
+        x: 320
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -211,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03a92e869a0339745bc2ee5576610dd3
+      spriteID: a3fca6f62fc722e4b9d4ef7f9b38a66a
       vertices: []
       indices: 
       edges: []
@@ -220,9 +228,9 @@ TextureImporter:
       name: Rabbit_5
       rect:
         serializedVersion: 2
-        x: 350
+        x: 400
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a05d83c62bb6344be4ba9f06837d7d
+      spriteID: ee4408ae4991e1042b9b60549ecfd4fb
       vertices: []
       indices: 
       edges: []
@@ -240,9 +248,9 @@ TextureImporter:
       name: Rabbit_6
       rect:
         serializedVersion: 2
-        x: 420
+        x: 480
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -251,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61668a1e579339a41a627f4a2993eeb3
+      spriteID: 9c1a636ab0c77ff4690bbeceec8d8e83
       vertices: []
       indices: 
       edges: []
@@ -260,9 +268,9 @@ TextureImporter:
       name: Rabbit_7
       rect:
         serializedVersion: 2
-        x: 490
+        x: 560
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b775ea618202284d95d5d4c6ad11b59
+      spriteID: e77923675964b174aa14ac3b7c9b1b00
       vertices: []
       indices: 
       edges: []
@@ -280,9 +288,9 @@ TextureImporter:
       name: Rabbit_8
       rect:
         serializedVersion: 2
-        x: 560
+        x: 640
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -291,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54cc7808c3b1d3b42985747b68c4e973
+      spriteID: 152167620302aea49a41f3bcec991ab9
       vertices: []
       indices: 
       edges: []
@@ -300,9 +308,9 @@ TextureImporter:
       name: Rabbit_9
       rect:
         serializedVersion: 2
-        x: 630
+        x: 720
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -311,7 +319,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ab3c04c1c247e489a96d165f09430f
+      spriteID: f8304c2ca2135f74d80682ee80131932
       vertices: []
       indices: 
       edges: []
@@ -320,9 +328,9 @@ TextureImporter:
       name: Rabbit_10
       rect:
         serializedVersion: 2
-        x: 700
+        x: 800
         y: 0
-        width: 70
+        width: 80
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -331,7 +339,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cc8af2a583b394086f1a57d5d05dce
+      spriteID: 651f4d40c730db14bb907fcf3e3a88f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54adf5970e9011e4fbfb1abe5c670302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1097607467a75c40b5980541f2be715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_13
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54acddbdd71e86e4389a6e25cd9cca24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbeaca8254d148a458055ae34e3d5cd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a9d647093478a42a2feb54ae2f10dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f86e2e3746949d4e88d917ee31e97f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_17
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f291bb93a5979468c801b7e79e5edb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725a5f70e998c2544be1bbf3f189fb02
       vertices: []
       indices: 
       edges: []
@@ -339,7 +507,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fb5760f2fad48c14d81793a2a29e2139
+    spriteID: 14bb7488d2e5dff4483a3c95e891460b
     vertices: []
     indices: 
     edges: []

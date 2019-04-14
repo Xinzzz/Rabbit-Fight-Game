@@ -17,9 +17,12 @@ public class Controller2D : MonoBehaviour
     float horizontalRaySpacing;
     float verticalRaySpacing;
 
+    ComboSystem attack;
+
     void Start()
     {
         collider = GetComponent<BoxCollider2D>();
+        attack = GetComponent<ComboSystem>();
         CaculateRaySpacing();
     }
 
@@ -44,6 +47,8 @@ public class Controller2D : MonoBehaviour
 
     public void Move(Vector3 velocity)
     {
+        
+
         UpdateRaycastOrigins();
         collsions.ResetCollision();
         if(velocity.x != 0)
@@ -54,7 +59,7 @@ public class Controller2D : MonoBehaviour
         {
             VerticalCollisions(ref velocity);
         }
-               
+        
         transform.Translate(velocity);
 
     }

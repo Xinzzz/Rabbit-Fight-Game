@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     float gravity;
     float jumpVelocity;
 
-    Vector3 velocity;
+    public Vector3 velocity;
 
     //flip character
     bool facingRight = false;
@@ -24,12 +24,13 @@ public class Player : MonoBehaviour
     //animations
     Animator anim;
 
+    AttackSystem attack;
     void Start()
     {
         controller = GetComponent<Controller2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
+        attack = GetComponent<AttackSystem>();
         gravity = (2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         jumpVelocity = gravity * timeToJumpApex;
     }
@@ -42,28 +43,43 @@ public class Player : MonoBehaviour
             velocity.y = 0;
         }
         //Input
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        //jump and gravity
-        if(input.y > 0 && controller.collsions.below)
+        if (!attack.attacking)
         {
-            velocity.y = jumpVelocity;
-        }
-        velocity.y -= gravity * Time.fixedDeltaTime;
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            //jump and gravity
+            if (input.y > 0 && controller.collsions.below)
+            {
+                velocity.y = jumpVelocity;
+            }
+            velocity.y -= gravity * Time.fixedDeltaTime;
 
-        velocity.x = input.x * moveSpeed;
-        anim.SetFloat("SpeedX", Mathf.Abs(input.x));
-        controller.Move(velocity);
+            velocity.x = input.x * moveSpeed;
+            
+            //Animations transition btw idle and run
+            if(Mathf.Abs(velocity.x) <= 0.001f)
+            {
+                anim.Play("Idle");
+            }
+            else
+            {
+                anim.Play("Run");
+            }
 
-        //flip
-        if(input.x > 0 && !facingRight)
-        {
-            Flip();
+            //Movement      
+            controller.Move(velocity);
+
+
+            //flip
+            if (input.x > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (input.x < 0 && facingRight)
+            {
+                Flip();
+            }
         }
-        else if(input.x < 0 && facingRight)
-        {
-            Flip();
-        }
+        
     }
 
     void Flip()
