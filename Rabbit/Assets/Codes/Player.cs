@@ -3,33 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Controller2D))]
-public class Player : MonoBehaviour
+public class Player : Character
 {
     Controller2D controller;
 
-    public float moveSpeed = 6f;
 
     //jump variable
     public float jumpHeight = 4f;
     public float timeToJumpApex = .4f;
-    float gravity;
     float jumpVelocity;
 
     public Vector3 velocity;
 
-    //flip character
-    bool facingRight = false;
-    SpriteRenderer sprite;
-
-    //animations
-    Animator anim;
 
     AttackSystem attack;
-    void Start()
+    public override void Start()
     {
+        base.Start();
+
         controller = GetComponent<Controller2D>();
-        sprite = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+
         attack = GetComponent<AttackSystem>();
         gravity = (2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         jumpVelocity = gravity * timeToJumpApex;
@@ -82,11 +75,9 @@ public class Player : MonoBehaviour
         
     }
 
-    void Flip()
+    public override IEnumerator TakeDamage(int hurtType)
     {
-        facingRight = !facingRight;
-        Vector3 charScale = transform.localScale;
-        charScale.x *= -1;
-        transform.localScale = charScale;
+        throw new System.NotImplementedException();
     }
+
 }

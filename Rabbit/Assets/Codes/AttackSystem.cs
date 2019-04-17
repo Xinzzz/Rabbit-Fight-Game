@@ -97,7 +97,7 @@ public class AttackSystem : MonoBehaviour
         Collider2D[] enmiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enmiesToDamage.Length; i++)
         {
-            enmiesToDamage[i].GetComponent<Wolf>().TakeDamage(attackType);
+            enmiesToDamage[i].GetComponent<Enemy>().StartCoroutine(enmiesToDamage[i].GetComponent<Enemy>().TakeDamage(attackType));
         }
     }
 

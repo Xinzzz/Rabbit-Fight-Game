@@ -7,6 +7,16 @@ TextureImporter:
     21300004: Wolf_2
     21300006: Wolf_3
     21300008: Wolf_4
+    21300010: Wolf_5
+    21300012: Wolf_6
+    21300014: Wolf_7
+    21300016: Wolf_8
+    21300018: Wolf_9
+    21300020: Wolf_10
+    21300022: Wolf_11
+    21300024: Wolf_12
+    21300026: Wolf_13
+    21300028: Wolf_14
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -65,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -76,7 +86,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -87,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -98,7 +108,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: WebGL
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -116,7 +126,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
+        width: 100
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -125,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2999de18d213f9b4096fb5af866c45c5
+      spriteID: 26989368ee2887b4f9adac6aafc502de
       vertices: []
       indices: 
       edges: []
@@ -134,9 +144,9 @@ TextureImporter:
       name: Wolf_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 100
         y: 0
-        width: 70
+        width: 100
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9155df33ca55a5b4ea83241734e772dd
+      spriteID: 926bbc8f5b97da349ae427c6c6073dd2
       vertices: []
       indices: 
       edges: []
@@ -154,9 +164,9 @@ TextureImporter:
       name: Wolf_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 201
         y: 0
-        width: 70
+        width: 100
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5be2fac96419b73459e0487352781020
+      spriteID: b324a5254de2e8d4f9c05ec6a1a0eb5d
       vertices: []
       indices: 
       edges: []
@@ -174,9 +184,9 @@ TextureImporter:
       name: Wolf_3
       rect:
         serializedVersion: 2
-        x: 210
+        x: 300
         y: 0
-        width: 70
+        width: 100
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e395a0302457d794db67e9bd298a209a
+      spriteID: 52009c057e2c371448de0b45c343fe47
       vertices: []
       indices: 
       edges: []
@@ -194,9 +204,9 @@ TextureImporter:
       name: Wolf_4
       rect:
         serializedVersion: 2
-        x: 280
+        x: 400
         y: 0
-        width: 70
+        width: 100
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,7 +215,207 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4138eb24a5486af46b0a223e805cbdfc
+      spriteID: 664f7c798e4e73045a0286acb2f685f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb6415990f3d0e4598132f48d1cccee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b63352184855e04583b850110771308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b44d4bc96d10a4db023d587319573e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467d4bfc0db073449954674a998c7bd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19489e73d5cd0b46964a8192b2864f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46aec284c02464449a7ffc8d306cf55f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c531da8b89b7a7419fecf1a3136afe0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9291a9d48796b46b4d037a99752b31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b06a520de9b0344929b936efc2c4c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolf_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 100
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d684f71f8a4e5f14881129938e35b815
       vertices: []
       indices: 
       edges: []
@@ -213,7 +423,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e938985f98438b44ca9199bddcae26cb
+    spriteID: a40672d44d0bac44b87b991f83ac8197
     vertices: []
     indices: 
     edges: []
