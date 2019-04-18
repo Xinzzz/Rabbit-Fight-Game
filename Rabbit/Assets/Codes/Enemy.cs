@@ -16,25 +16,69 @@ public class Enemy : Character
     public GameObject target;
 
     [SerializeField]
+    public float inAttackRange;
+    [SerializeField]
     public float attackRange;
+    public Transform attackPos;
+    public LayerMask whatIsPlayer;
+
+    Player player;
+
+    public bool hitFromRight;
+    public float hitForce;
+
+    public float dizzyTime = 1f;
+
+    public GameObject hitEffect;
+    public Transform hitPos;
 
     public override void Start()
     {
         base.Start();
         controller = GetComponent<Controller2D>();
+        player = FindObjectOfType<Player>();
         ChangeState(new IdleState());
     }
 
     private void FixedUpdate()
     {
-        wolfVelocity.y -= gravity * Time.fixedDeltaTime;
-        controller.Move(wolfVelocity);
-        currentState.Excute();
-        if(!attacking)
+        dizzyTime -= Time.fixedDeltaTime;
+        if(!isDead)
         {
-            LookAtTarget();
+            if(!hurting)
+            {
+                wolfVelocity.y -= gravity * Time.fixedDeltaTime;
+                controller.Move(wolfVelocity);
+                currentState.Excute();
+                if (!attacking)
+                {
+                    LookAtTarget();
+                }
+            }
+            //knock back
+            else if (hurting)
+            {
+                if (hitFromRight)
+                {
+                    wolfVelocity.x -= hitForce * Time.fixedDeltaTime;
+                    controller.Move(wolfVelocity);
+                }
+                else
+                {
+                    wolfVelocity.x += hitForce * Time.fixedDeltaTime;
+                    controller.Move(wolfVelocity);
+                }
+            }
         }
         DeadOrNot();
+        if (isDead)
+        {
+            anim.Play("DieW");
+        }
+        if(player.isDead)
+        {
+            RemoveTarget();
+        }
     }
 
     private void LookAtTarget()
@@ -50,11 +94,17 @@ public class Enemy : Character
         }
     }
 
+    public void RemoveTarget()
+    {
+        target = null;
+        ChangeState(new PatrolState());
+    }
+
     public bool InAttackRange()
     {
         if(target != null)
         {
-            return Vector2.Distance(target.transform.position, transform.position) <= attackRange;
+            return Vector2.Distance(target.transform.position, transform.position) <= inAttackRange;
         }
         else
         {
@@ -107,6 +157,40 @@ public class Enemy : Character
 
     }
 
+    public void WolfAttack()
+    {
+        Collider2D[] playerToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsPlayer);
+        for (int i = 0; i < playerToDamage.Length; i++)
+        {
+            Instantiate(hitEffect, hitPos.position, Quaternion.identity);
+            playerToDamage[i].GetComponent<Player>().StartCoroutine(playerToDamage[i].GetComponent<Player>().TakeDamage(1));
+            if(playerToDamage[i].GetComponent<Player>().transform.position.x < transform.position.x)
+            {
+                playerToDamage[i].GetComponent<Player>().knockBackFromRight = true;
+                if (!playerToDamage[i].GetComponent<Player>().facingRight)
+                {
+                    playerToDamage[i].GetComponent<Player>().Flip();
+                    
+                }
+            }
+            else
+            {
+                playerToDamage[i].GetComponent<Player>().knockBackFromRight = false;
+                if (playerToDamage[i].GetComponent<Player>().facingRight)
+                {
+                    playerToDamage[i].GetComponent<Player>().Flip();
+                    
+                }
+            }
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+
+    }
+
     public void StopAttack()
     {
         attacking = false;
@@ -120,14 +204,17 @@ public class Enemy : Character
         controller.Move(wolfVelocity);
     }
 
+    
+
     public void StopHurting()
     {
         hurting = false;
-        anim.Play("IdleW");
+        ChangeState(new IdleState());
+        dizzyTime = 1f;
     }
     public override IEnumerator TakeDamage(int hurtType)
     {
-        //health -= 1;
+        health -= 1;
         if(!isDead)
         {
             if (hurtType == 1)
@@ -150,27 +237,5 @@ public class Enemy : Character
         }
     }
 
-    /*  public void TakeDamage(int hurtType)
-      {
-          Debug.Log("hurting");
-          StartCoroutine(DoHurtAnim(0.3f, hurtType));
-          hurting = true;
-      }
-
-      IEnumerator DoHurtAnim(float waitTime, int hurtType)
-      {
-          yield return new WaitForSeconds(waitTime);
-          if (hurtType == 1)
-          {
-              anim.Play("HurtW02");
-          }
-          else if (hurtType == 2)
-          {
-              anim.Play("HurtW01");
-          }
-          else if (hurtType == 3)
-          {
-              anim.Play("HurtW03");
-          }
-      }*/
+   
 }

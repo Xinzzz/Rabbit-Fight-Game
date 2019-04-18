@@ -8,7 +8,7 @@ public abstract class Character : MonoBehaviour
 
     [SerializeField]
     protected float moveSpeed;
-    protected float gravity = 15f;
+    protected float gravity = 10f;
 
     [SerializeField]
     protected int health;
@@ -16,7 +16,7 @@ public abstract class Character : MonoBehaviour
     public bool isDead;
     
 
-    protected bool facingRight;
+    public bool facingRight;
     public bool attacking;
     public bool hurting;
 
@@ -40,7 +40,6 @@ public abstract class Character : MonoBehaviour
     {
         if (health <= 0)
         {
-            Debug.Log("Im dead");
             isDead = true;
         }
         else

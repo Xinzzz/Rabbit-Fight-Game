@@ -7,7 +7,7 @@ public class AttackState : IEnemyState
     Enemy enemy;
 
     float attackTimer = 0;
-    float attackCD = 3f;
+    float attackCD = 2f;
     bool canAttack = true;
 
     public void Enter(Enemy enemy)
@@ -16,16 +16,20 @@ public class AttackState : IEnemyState
     }
 
     public void Excute()
-    {
-        Attack();
-        if(enemy.target != null && !enemy.InAttackRange())
+    {       
+        if(!enemy.hurting && enemy.dizzyTime <= 0)
         {
-            enemy.EnemeyMovement();
+            Attack();
+            if (enemy.target != null && !enemy.InAttackRange())
+            {
+                enemy.EnemeyMovement();
+            }
+            else if (enemy.target == null)
+            {
+                enemy.ChangeState(new PatrolState());
+            }
         }
-        else if(enemy.target == null)
-        {
-            enemy.ChangeState(new PatrolState());
-        }
+        
     }
 
     public void Exit()

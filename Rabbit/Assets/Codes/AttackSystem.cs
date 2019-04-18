@@ -17,6 +17,8 @@ public class AttackSystem : MonoBehaviour
     public LayerMask whatIsEnemy;
     public float attackRange;
 
+    public GameObject hitEffect;
+    public Transform hitPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,8 @@ public class AttackSystem : MonoBehaviour
         if(canPress)
         {
             buttomPress++;
-            if (buttomPress >= 1 && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            if (buttomPress >= 1 && (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle") ||
+                anim.GetCurrentAnimatorStateInfo(0).IsName("Run")))
             {
                 anim.Play("Attack01");
                 Damage(1);
@@ -97,7 +100,26 @@ public class AttackSystem : MonoBehaviour
         Collider2D[] enmiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enmiesToDamage.Length; i++)
         {
+            Instantiate(hitEffect, hitPos.position, Quaternion.identity);
             enmiesToDamage[i].GetComponent<Enemy>().StartCoroutine(enmiesToDamage[i].GetComponent<Enemy>().TakeDamage(attackType));
+            if (enmiesToDamage[i].GetComponent<Enemy>().transform.position.x < transform.position.x)
+            {
+                enmiesToDamage[i].GetComponent<Enemy>().hitFromRight = true;
+                if (!enmiesToDamage[i].GetComponent<Enemy>().facingRight)
+                {
+                    enmiesToDamage[i].GetComponent<Enemy>().Flip();
+
+                }
+            }
+            else
+            {
+                enmiesToDamage[i].GetComponent<Enemy>().hitFromRight = false;
+                if (enmiesToDamage[i].GetComponent<Enemy>().facingRight)
+                {
+                    enmiesToDamage[i].GetComponent<Enemy>().Flip();
+
+                }
+            }
         }
     }
 

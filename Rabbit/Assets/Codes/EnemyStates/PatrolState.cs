@@ -17,13 +17,17 @@ public class PatrolState : IEnemyState
 
     public void Excute()
     {
-        Patrol();
-        enemy.EnemeyMovement();
-        enemy.EdgeDectection();
-        if (enemy.target != null && enemy.InAttackRange())
+        if(enemy.dizzyTime <= 0)
         {
-            enemy.ChangeState(new AttackState());
+            Patrol();
+            enemy.EnemeyMovement();
+            enemy.EdgeDectection();
+            if (enemy.target != null && enemy.InAttackRange())
+            {
+                enemy.ChangeState(new AttackState());
+            }
         }
+        
     }
 
     public void Exit()
