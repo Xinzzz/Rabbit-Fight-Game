@@ -47,7 +47,7 @@ public class Player : Character
         jumpVelocity = gravity * timeToJumpApex;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         DeadOrNot();
         if(isDead)
